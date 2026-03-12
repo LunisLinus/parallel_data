@@ -9,7 +9,8 @@ include_directories(task1)
 
 add_executable(task2
         task1/task2.cpp
-        task1/task2.h)
+        task1/task2.h
+)
 target_link_libraries(task2 PRIVATE OpenMP::OpenMP_CXX)
 
 add_executable(task4
