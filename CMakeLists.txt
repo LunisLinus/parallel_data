@@ -8,19 +8,17 @@ find_package(OpenMP REQUIRED)
 include_directories(task1)
 
 add_executable(task2
-        task3/task2.cpp
-        task3/task2.h
+        task4/task2.cpp
+        task4/task2.h
 )
 target_link_libraries(task2 PRIVATE OpenMP::OpenMP_CXX)
 
 add_executable(task4
-        task3/task4.cpp
-        task3/task4.h
-)
+        task4/task4.cpp
+        task4/task4.h)
 target_link_libraries(task4 PRIVATE OpenMP::OpenMP_CXX)
 
 add_executable(task6
-        task3/task6.cpp
-        task3/task6.h
-)
+        task4/task6.cpp
+        task4/task6.h)
 target_link_libraries(task6 PRIVATE OpenMP::OpenMP_CXX)
