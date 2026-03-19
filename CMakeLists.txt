@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(OpenMP REQUIRED)
 
 # Список папок с лабораторными работами
-set(LAB_DIRS task1 task2 task3 task4)
+set(LAB_DIRS task1 task2 task3 task4 task5)
 
 foreach(LAB_DIR ${LAB_DIRS})
     # Получаем все .cpp файлы в папке
