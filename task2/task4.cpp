@@ -30,12 +30,12 @@ int main() {
 #pragma omp barrier
 
 #pragma omp critical
-{
-    std::cout << "Поток " << omp_get_thread_num()
-              << " получил значения: token=" << token
-              << ", alpha=" << alpha
-              << std::endl;
-}
+        {
+            std::cout << "Поток " << omp_get_thread_num()
+                      << " получил значения: token=" << token
+                      << ", alpha=" << alpha
+                      << std::endl;
+        }
     }
 
     return 0;

@@ -38,16 +38,16 @@ int main() {
         }
 
 #pragma omp section
-{
-    dot = heavy_dot(a, b);
-    std::cout << "dot  done by thread " << omp_get_thread_num() << "\n";
-}
+        {
+            dot = heavy_dot(a, b);
+            std::cout << "dot  done by thread " << omp_get_thread_num() << "\n";
+        }
 
 #pragma omp section
-{
-    mx = heavy_max(a);
-    std::cout << "max  done by thread " << omp_get_thread_num() << "\n";
-}
+        {
+            mx = heavy_max(a);
+            std::cout << "max  done by thread " << omp_get_thread_num() << "\n";
+        }
     } // по умолчанию барьер в конце sections: все результаты уже готовы
 
     double t1 = omp_get_wtime();
