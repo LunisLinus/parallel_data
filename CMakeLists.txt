@@ -8,7 +8,6 @@ find_package(OpenMP REQUIRED)
 find_package(BLAS REQUIRED)
 find_package(LAPACK REQUIRED)
 
-# lab1-lab5
 set(LAB_DIRS lab1 lab2 lab3 lab4 lab5)
 
 foreach(LAB_DIR ${LAB_DIRS})
@@ -23,16 +22,16 @@ foreach(LAB_DIR ${LAB_DIRS})
     endforeach()
 endforeach()
 
-# lab6/task1
-file(GLOB LAB6_TASK1_SUBDIRS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "lab6/task1/*")
+file(GLOB LAB6_SUBDIRS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "lab6/*")
 
-foreach(SUBDIR ${LAB6_TASK1_SUBDIRS})
+foreach(SUBDIR ${LAB6_SUBDIRS})
     if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/${SUBDIR}")
         file(GLOB SRC_FILES "${SUBDIR}/*.cpp")
         get_filename_component(SUBDIR_NAME ${SUBDIR} NAME)
 
         foreach(SRC_FILE ${SRC_FILES})
-            set(FULL_TARGET_NAME "lab6_task1_${SUBDIR_NAME}")
+            get_filename_component(FILE_NAME ${SRC_FILE} NAME_WE)
+            set(FULL_TARGET_NAME "lab6_${FILE_NAME}")
 
             add_executable(${FULL_TARGET_NAME} ${SRC_FILE})
 
