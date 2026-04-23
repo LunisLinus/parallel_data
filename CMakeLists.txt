@@ -58,5 +58,11 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(lab7_task2 lab7/task2.cpp)
+add_executable(lab7_task4 lab7/task4.cpp) # /opt/homebrew/bin/mpirun -n 4 ./cmake-build-debug/lab7_task4
+add_executable(lab7_task6 lab7/task6.cpp) # /opt/homebrew/bin/mpirun -n 4 ./cmake-build-debug/lab7_task6
+add_executable(lab8_task2 lab8/task2.cpp)
 add_executable(lab8_task4 lab8/task4.cpp)
+add_executable(lab8_task6 lab8/task6.cpp) # /opt/homebrew/bin/mpirun -n 4 ./cmake-build-debug/lab8_task6
+add_executable(lab9_task2 lab9/task2.cpp)
+add_executable(lab9_task4 lab9/task4.cpp) # /opt/homebrew/bin/mpirun -n 4 ./cmake-build-debug/lab9_task6
 add_executable(lab9_task6 lab9/task6.cpp) # /opt/homebrew/bin/mpirun -n 4 ./cmake-build-debug/lab9_task6
