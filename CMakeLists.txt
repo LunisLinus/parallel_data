@@ -50,7 +50,7 @@
 #    endif()
 #endforeach()
 
-# для lab7-9
+# для lab7-10
 cmake_minimum_required(VERSION 3.10)
 project(parallel_data LANGUAGES CXX)
 
@@ -66,3 +66,5 @@ add_executable(lab8_task6 lab8/task6.cpp) # /opt/homebrew/bin/mpirun -n 4 ./cmak
 add_executable(lab9_task2 lab9/task2.cpp)
 add_executable(lab9_task4 lab9/task4.cpp) # /opt/homebrew/bin/mpirun -n 4 ./cmake-build-debug/lab9_task6
 add_executable(lab9_task6 lab9/task6.cpp) # /opt/homebrew/bin/mpirun -n 4 ./cmake-build-debug/lab9_task6
+add_executable(lab10_task1 lab10/task1.cpp) # /opt/homebrew/bin/mpirun -np 4 ./cmake-build-debug/lab10_task1 1000 default
+add_executable(lab10_task2 lab10/task2.cpp) # /opt/homebrew/bin/mpirun -np 4 ./cmake-build-debug/lab10_task2 1000 default
